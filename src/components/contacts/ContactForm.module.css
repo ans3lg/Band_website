@@ -1,0 +1,70 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-300);
+  margin-bottom: 0.5rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-gray-500);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+}
+
+.field--error {
+  border-color: var(--color-red) !important;
+}
+
+.error {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--color-red);
+}
+
+.success {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--radius-lg);
+}
+
+.success h3 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  letter-spacing: 0.06em;
+  color: var(--color-red);
+  margin-bottom: 0.75rem;
+}
+
+.success p {
+  color: var(--color-gray-300);
+  margin-bottom: 1.5rem;
+}

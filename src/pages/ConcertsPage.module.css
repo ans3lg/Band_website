@@ -1,0 +1,23 @@
+.page {
+  padding-top: 3rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.count {
+  font-size: 0.9rem;
+  color: var(--color-gray-500);
+}
+
+@media (min-width: 768px) {
+  .toolbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
