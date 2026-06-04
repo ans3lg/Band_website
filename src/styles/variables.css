@@ -1,0 +1,35 @@
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #141414;
+  --color-bg-card: #1a1a1a;
+  --color-surface: #222222;
+  --color-red: #e63946;
+  --color-red-hover: #ff4d5a;
+  --color-red-dark: #b82e38;
+  --color-white: #ffffff;
+  --color-gray-100: #f5f5f5;
+  --color-gray-300: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-700: #404040;
+  --color-black: #000000;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --header-height: 72px;
+  --container-max: 1280px;
+  --container-wide: 1600px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-red: 0 0 40px rgba(230, 57, 70, 0.35);
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --z-header: 100;
+  --z-menu: 200;
+  --z-loader: 300;
+  --z-modal: 250;
+}

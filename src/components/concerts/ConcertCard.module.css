@@ -1,0 +1,92 @@
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  border-color: var(--color-red);
+  transform: translateX(4px);
+  box-shadow: -4px 0 0 var(--color-red);
+}
+
+.card--compact {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+}
+
+.card--compact .card__btn {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.card__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 72px;
+  padding-right: 1.25rem;
+  border-right: 2px solid var(--color-red);
+}
+
+.card__day {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--color-red);
+}
+
+.card__month {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-500);
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.card__city {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card__venue {
+  color: var(--color-gray-300);
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.card__status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-success);
+}
+
+.card__status--soldout {
+  color: var(--color-red);
+}
+
+@media (min-width: 600px) {
+  .card--compact {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: unset;
+  }
+
+  .card--compact .card__btn {
+    grid-column: auto;
+    justify-self: auto;
+  }
+}

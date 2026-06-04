@@ -1,0 +1,78 @@
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-red);
+  box-shadow: var(--shadow-red);
+}
+
+.card__coverLink {
+  display: block;
+}
+
+.card__cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .card__cover img {
+  transform: scale(1.08);
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(230, 57, 70, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.card__overlay span {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.card:hover .card__overlay {
+  opacity: 1;
+}
+
+.card__body {
+  padding: 1.25rem;
+}
+
+.card__year {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-red);
+  letter-spacing: 0.1em;
+}
+
+.card__title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0.35rem 0 1rem;
+}

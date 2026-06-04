@@ -1,0 +1,118 @@
+export const concerts = [
+  {
+    id: 1,
+    date: '2026-06-15',
+    dateDisplay: '15 июня 2026',
+    city: 'Москва',
+    venue: 'ГлавClub Green Concert',
+    ticketUrl: 'https://example.com/tickets/1',
+    status: 'available',
+  },
+  {
+    id: 2,
+    date: '2026-06-22',
+    dateDisplay: '22 июня 2026',
+    city: 'Санкт-Петербург',
+    venue: 'A2 Green Concert',
+    ticketUrl: 'https://example.com/tickets/2',
+    status: 'available',
+  },
+  {
+    id: 3,
+    date: '2026-07-05',
+    dateDisplay: '5 июля 2026',
+    city: 'Казань',
+    venue: 'Пирамида',
+    ticketUrl: 'https://example.com/tickets/3',
+    status: 'available',
+  },
+  {
+    id: 4,
+    date: '2026-07-12',
+    dateDisplay: '12 июля 2026',
+    city: 'Екатеринбург',
+    venue: 'Tele-Club',
+    ticketUrl: 'https://example.com/tickets/4',
+    status: 'soldout',
+  },
+  {
+    id: 5,
+    date: '2026-07-20',
+    dateDisplay: '20 июля 2026',
+    city: 'Новосибирск',
+    venue: 'Garage Music',
+    ticketUrl: 'https://example.com/tickets/5',
+    status: 'available',
+  },
+  {
+    id: 6,
+    date: '2026-08-02',
+    dateDisplay: '2 августа 2026',
+    city: 'Краснодар',
+    venue: 'Arena Hall',
+    ticketUrl: 'https://example.com/tickets/6',
+    status: 'available',
+  },
+  {
+    id: 7,
+    date: '2026-08-10',
+    dateDisplay: '10 августа 2026',
+    city: 'Ростов-на-Дону',
+    venue: 'Rooftop Live',
+    ticketUrl: 'https://example.com/tickets/7',
+    status: 'soldout',
+  },
+  {
+    id: 8,
+    date: '2026-08-18',
+    dateDisplay: '18 августа 2026',
+    city: 'Воронеж',
+    venue: 'Podzemka',
+    ticketUrl: 'https://example.com/tickets/8',
+    status: 'available',
+  },
+  {
+    id: 9,
+    date: '2026-09-01',
+    dateDisplay: '1 сентября 2026',
+    city: 'Москва',
+    venue: 'Stadium Live',
+    ticketUrl: 'https://example.com/tickets/9',
+    status: 'available',
+  },
+  {
+    id: 10,
+    date: '2026-09-14',
+    dateDisplay: '14 сентября 2026',
+    city: 'Самара',
+    venue: 'Metel Club',
+    ticketUrl: 'https://example.com/tickets/10',
+    status: 'available',
+  },
+  {
+    id: 11,
+    date: '2026-09-28',
+    dateDisplay: '28 сентября 2026',
+    city: 'Санкт-Петербург',
+    venue: 'MOD Club',
+    ticketUrl: 'https://example.com/tickets/11',
+    status: 'available',
+  },
+  {
+    id: 12,
+    date: '2026-10-05',
+    dateDisplay: '5 октября 2026',
+    city: 'Нижний Новгород',
+    venue: 'Music Bar 2.0',
+    ticketUrl: 'https://example.com/tickets/12',
+    status: 'soldout',
+  },
+];
+
+export const concertCities = [...new Set(concerts.map((c) => c.city))].sort();
+
+export function getUpcomingConcerts(limit = 4) {
+  return concerts
+    .filter((c) => c.status === 'available')
+    .slice(0, limit);
+}
